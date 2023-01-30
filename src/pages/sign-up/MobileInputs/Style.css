@@ -1,0 +1,27 @@
+.mobile-container {
+    height: 120%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0 0px 0;
+}
+
+.mobilenumberInput {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.otp{
+    width: 20px;
+    margin: 5px;
+    padding: 5px;
+}
