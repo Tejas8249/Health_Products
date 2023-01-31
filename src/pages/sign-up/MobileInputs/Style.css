@@ -9,7 +9,9 @@
     padding: 10px;
     margin: 10px 0 0px 0;
 }
-
+.sign-up-with {
+    width: inherit;
+}
 .mobilenumberInput {
     height: 100px;
     width: 100%;

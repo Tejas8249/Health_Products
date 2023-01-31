@@ -21,7 +21,7 @@ const Email = () => {
                 <span className='green'>Mobile</span>
                 <input type="tel" maxLength={10}/>
             </div>
-            <button className='btn-green'>Get Started</button>
+            <button className='btn-green mt-2'>Get Started</button>
         </div>
     )
 }
