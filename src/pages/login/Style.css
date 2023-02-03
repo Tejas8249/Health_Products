@@ -1,0 +1,44 @@
+.wrapp {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    font-size: clamp(12px, 1vw, 13px);
+}
+
+.wrapp input{
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid rgba(23, 105, 78, 0.368);
+    box-shadow: 0 0 2px 1px rgba(23, 105, 78, 0.158);
+    margin: 2px 0;
+    border-radius: 3px;
+}
+.f-password {
+    display: flex;
+    width: 70%;
+    padding: 0 0px;
+    justify-content: flex-end;
+}
+
+.f-password a {
+    font-size: x-small;
+}
+.green-btn{
+    background-color:rgb(20, 104, 76);
+    color: white;
+    width: 75%;
+    /* height: 25px; */
+    padding: 8px 0;
+    border-radius: 20px;
+    border-style: none;
+    }
+  
+.login-instruction{
+    width: 50%;
+  }
+
+.login-instructionP{
+      text-align: center;
+      
+}
