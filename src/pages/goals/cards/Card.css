@@ -1,0 +1,69 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+   .card {
+    /* width: calc(33.33% - 10px); */
+    width:250px;
+    background-color: white;
+    border: 1px solid rgb(195, 194, 194);
+    height: 150px;
+    margin: 0 3px;
+   text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+  }
+  .display{
+    display: flex ;
+    justify-content:flex-start;
+    align-items: flex-start;
+    margin-left:380px;
+    margin-top: 25px;
+    padding: 50px;
+  }
+  .card img {
+    width:100%;
+    height:50px;
+ }
+  
+  .card h3 {
+    margin-top: 10px;
+
+  }
+   
+h3,p{
+  color: rgb(20, 104, 76);
+  text-align: start;
+}
+p{
+  font-size: smaller;
+  font-weight:500;
+}
+span,a{
+color:rgb(20, 104, 76);
+}
+.descp{
+font-weight: 400;
+display: flex;
+justify-content: space-between;
+}
+.goal{
+  background-color: rgb(20, 104, 76);
+  border-radius: 50px;
+  margin-top: 12px;
+  padding: 3px;
+  color: white;
+  text-decoration: none;
+}
+span{
+  margin-top:5pxpx;
+  font-weight:100;
+  font-size: small;
+}
+.icon{
+
+}
