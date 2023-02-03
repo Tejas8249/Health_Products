@@ -6,20 +6,28 @@ import { AiOutlineUser } from "react-icons/ai"
 import { TbStethoscope } from "react-icons/tb"
 import { NavLink } from 'react-router-dom'
 
+import {useDispatch, useSelector} from "react-redux"
+import { UserAction } from '../../redux/actionCreates/UserAction'
 
-const Button = ({ isUser, setIsUser }) => {
+const Button = () => {
+
+let dispatch=useDispatch();
+let data= useSelector(state=>state.UserReducer)
+// console.log(data)
+
+
   return (
     <div className="sign-up-with">
       <div className='aspect-container'>
-        <div className='lables' onClick={() => setIsUser(true)}
-          style={{ backgroundColor: isUser ? " rgb(32, 140, 109)" : "white", color: isUser? "white":"rgb(32, 140, 109)"}}
+        <div className='lables'onClick={()=>dispatch(UserAction(true))} 
+                  style={{ backgroundColor: data ? " rgb(32, 140, 109)" : "white", color: data? "white":"rgb(32, 140, 109)"}}
         >
-          <AiOutlineUser size={20} className={isUser ? "white" : "green"} />
+          <AiOutlineUser size={20} className={data ? "white" : "green"} />
           <p>User</p>
         </div>  
-        <div className='lables' onClick={() => setIsUser(false)}
-          style={{ backgroundColor: isUser ? "white" : " rgb(32, 140, 109)",  color: isUser? "rgb(32, 140, 109)":"white"}}>
-          <TbStethoscope size={20} className={!isUser ? "white" : "green"} />
+        <div className='lables' onClick={() => dispatch(UserAction(false))}
+          style={{ backgroundColor: data ? "white" : " rgb(32, 140, 109)",  color: data? "rgb(32, 140, 109)":"white"}}>
+          <TbStethoscope size={20} className={!data ? "white" : "green"} />
           <p>Provider</p>
         </div>
       </div>
@@ -30,7 +38,7 @@ const Button = ({ isUser, setIsUser }) => {
           <MdEmail size={20} className='green'/>
           <p>Email</p>
         </div>
-      </NavLink>
+      </NavLink>  
 
       <NavLink to="/sign-up/mobile">
       <div className='lables'>
