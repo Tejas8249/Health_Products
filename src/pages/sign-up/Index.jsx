@@ -18,7 +18,7 @@ const Index = ({isUser}) => {
           <div className="instruction">
             <Link className='green' to="" id="oneline" >Already have an account? Login here</Link>
             <p className='green'>By signing up you agree to the Terms of Service</p>
-            <p className='green'>and <Link to="" className='green'>Privacy Policy</Link> including <Link href="" to="" className='green'>Cookie use</Link> </p>
+            <p className='green'>and <Link to="" className='green'>Privacy Policy</Link> including <Link to="" href="" className='green'>Cookie use</Link> </p>
           </div>
         </div>
        
