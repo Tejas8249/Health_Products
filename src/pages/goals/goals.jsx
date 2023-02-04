@@ -3,6 +3,7 @@ import Cards from "./cards/Card";
 import "./Style.css";
 import Button from "./buttons/Btn";
 import "./buttons/btn.css";
+import Input from "./input/Input";
 const Goals = () => {
     return (
         <>
@@ -12,16 +13,9 @@ const Goals = () => {
                     <p className="smalltext"> pick from the Options below</p>
                 </div>
                 <div>
-                    <div class="container">
-                        <form class="nosubmit">
-                            <input
-                                class="nosubmit"
-                                type="search"
-                                placeholder="Search..."
-                            />
-                        </form>
-                    </div>
+                    <Input />
                 </div>
+               
 
                 <div className="filter">
                     <p>100 Goals available </p>
