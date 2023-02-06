@@ -12,6 +12,8 @@ import Home from './pages/home/index';
 import ButtonContainer from './pages/sign-up/Button';
 import Mobile from './pages/sign-up/MobileInputs/Index';
 import { useState } from 'react';
+import Mainheader from './components/Mainheader';
+// import Subscription from './pages/home/components/subsciptions/Subscription';
 
 function App() {
   const [isUser,setIsUser] = useState(true); 
@@ -20,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route index element={<Home />}></Route>
+          {/* <Route index element={<Home />}></Route> */}
           <Route path='/shop' element={<Shop />}></Route>
           <Route path='/about-us' element={<About_us />}></Route>
           <Route path='/contact-us' element={<Contact_us />}></Route>
@@ -33,7 +35,11 @@ function App() {
           </Route>
         </Routes>
         <Footer />
+        {/* <Subscription/> */}
+        <Home/>
+        <Mainheader/>
       </BrowserRouter>
+      
     </div>
   );
 }
