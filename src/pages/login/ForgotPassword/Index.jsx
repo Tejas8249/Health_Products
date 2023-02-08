@@ -7,7 +7,7 @@ const Index = () => {
             <h3 className='green'>Forgot Password</h3>
 
             <div className='login-instruction'>
-                <p className='green login-instruction'>Enter your registered email address and we will send you a verification code to reset your password</p>
+                <p className='green' style={{fontSize: 12}}>Enter your registered email address and we will send you a verification code to reset your password</p>
             </div>
 
             <div className='wrapp'>

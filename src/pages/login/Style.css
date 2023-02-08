@@ -35,10 +35,7 @@
     }
   
 .login-instruction{
-    width: 50%;
+    width: 90%;
+     text-align: center;
   }
 
-.login-instructionP{
-      text-align: center;
-      
-}

@@ -1,4 +1,4 @@
-import { USER_ACTION, USER_LOGGEDIN  } from "../actions"
+import { USER_ACTION } from "../actions"
 
 
 export const UserAction = (res) => {
@@ -8,10 +8,5 @@ export const UserAction = (res) => {
     }
 }
 
-export const UserLoggedInAction = (res) => {
-    return {
-        type : USER_LOGGEDIN,
-        payload : res
-    }
-}
+
   

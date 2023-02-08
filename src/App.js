@@ -21,12 +21,12 @@ import Mainheader from './components/Mainheader';
 
 function App() {
   
-  return (
-    <div className="App">
+  return ( 
+    <div className="App">  
       <BrowserRouter>
         <Header /> 
         <Routes>
-          {/* <Route index element={<Home />}></Route> */}
+          <Route index element={<Home />}></Route>
           <Route path='/shop' element={<Shop />}></Route>
           <Route path='/about-us' element={<About_us />}></Route>
           <Route path='/contact-us' element={<Contact_us />}></Route>
@@ -38,15 +38,14 @@ function App() {
             <MidContainer/>
           </WrapperContainer>}>
             <Route index element={<ButtonContainer/>}></Route>
-            <Route path="/sign-up/email" element={<Email/>}></Route>
+            <Route path="/sign-up/email" element={<Email/>}>
+            </Route>
             <Route path="/sign-up/mobile" element={<Mobile/>}></Route>
-            {/* <Route path="/sign-up/email" element={<Email/>}></Route> */}
+            <Route path="/sign-up/email" element={<Email/>}></Route>
           </Route>
         </Routes>
         <Footer />
-        {/* <Subscription/> */}
-        <Home/>
-        <Mainheader/>
+        
       </BrowserRouter>
       
     </div>

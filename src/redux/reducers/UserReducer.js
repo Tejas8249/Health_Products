@@ -1,5 +1,4 @@
-import {combineReducers} from "redux";
-import { USER_ACTION, USER_LOGGEDIN } from "../actions";
+import { USER_ACTION} from "../actions";
 
 let UserReducer=(state=true, Action)=>{
      switch (Action.type) {
@@ -10,15 +9,4 @@ let UserReducer=(state=true, Action)=>{
      }
 }
 
-let UserLoggedIn=(state=false, Action)=>{
-    switch (Action.type) {
-       case USER_LOGGEDIN: 
-            return state=Action.payload     
-       default:
-           return state;
-    }
-}
-
-let rootReducer=combineReducers({UserReducer, UserLoggedIn});
-
-export default rootReducer;
+export default UserReducer;
