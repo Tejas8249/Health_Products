@@ -1,0 +1,22 @@
+.btnvalue {
+    display: flex;
+    justify-content: center;
+}
+button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgba(155, 155, 155, 0.8);
+}
+.previous,
+.next {
+    background-color: rgb(211, 255, 240);
+    box-shadow: none;
+}
+button:hover {
+    background-color: rgb(20, 104, 76);
+    color: white;
+}

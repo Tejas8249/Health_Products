@@ -36,6 +36,7 @@ function App() {
             <Route path="/sign-up/email" element={<Email />}></Route>
             <Route path="/sign-up/mobile" element={<Mobile />}></Route>
             {/* <Route path="/sign-up/email" element={<Email/>}></Route> */}
+            {/* <Route path="/goal-up/goal" element={<Goal/>}></Route> */}
           </Route>
         </Routes>
         <Footer />
