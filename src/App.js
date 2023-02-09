@@ -13,8 +13,8 @@ import ButtonContainer from './pages/sign-up/Button';
 import Mobile from './pages/sign-up/MobileInputs/Index';
 
 import { useState } from 'react';
-import Goals from './pages/goals/goals';
-// import Goals from './pages/goals/Goals';
+import GoalsCard from './pages/goals/GoalsCard';
+
 
 
 function App() {
@@ -28,8 +28,11 @@ function App() {
           <Route path='/shop' element={<Shop />}></Route>
           <Route path='/about-us' element={<About_us />}></Route>
           <Route path='/contact-us' element={<Contact_us />}></Route>
+
+         
           <Route path='/login' element={<Login />}></Route>
-          <Route path='/goals' element={<Goals/>}></Route>
+          <Route path="/goalcard" element={<GoalsCard/>} ></Route>
+
 
           <Route path='/sign-up' element={<Sign_Up isUser={isUser}/>}>
             <Route index element={<ButtonContainer isUser={isUser} setIsUser={setIsUser}/>}></Route>
@@ -37,13 +40,20 @@ function App() {
             <Route path="/sign-up/mobile" element={<Mobile/>}></Route>
             
 
+            
+
                
             {/* <Route path="/sign-up/email" element={<Email/>}></Route> */}
-            {/* <Route path="/goal-up/goal" element={<Goal/>}></Route> */}
+            {/* <Route path="/goal-up/goalcards" element={<GoalsCards/>}></Route> */}
           </Route>
+
+
         </Routes>
         <Footer />
       </BrowserRouter>
+
+     
+      
     </div>
   );
 }
