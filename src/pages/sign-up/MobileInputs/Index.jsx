@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./Style.css"
 
 const Index = () => {
@@ -25,7 +25,7 @@ const Index = () => {
                    <input type="text" maxLength={1} className='otp'/>
                    <input type="text" maxLength={1} className='otp'/>
                  </div>
-                 <NavLink href="" className='green'>Resend OTP</NavLink>
+                 <Link href="" className='green'>Resend OTP</Link>
             </div>
 
             <button className='btn-green'>Get Started</button>
