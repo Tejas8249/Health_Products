@@ -6,11 +6,12 @@ import { useSelector} from "react-redux"
 
 
 const WrapperContainer = ({children}) => {
-  let data= useSelector(state=>state.UserReducer)
+  let loginType= useSelector(state=>state.UserReducer)
+  {console.log(loginType)}
   return (
     <div className="signup-container">
       <div className="mid-container">
-        <div className="img"  style={{backgroundImage: data ? `url(${BackGround1})`:`url(${BackGround2})`}}>
+        <div className="img"  style={{backgroundImage: loginType ? `url(${BackGround1})`:`url(${BackGround2})`}}>
         </div>
         {children}
       </div>

@@ -16,7 +16,7 @@ import ForgotPass from './pages/login/ForgotPassword/Index';
 
 
 
-import Mainheader from './components/Mainheader';
+// import Mainheader from './components/Mainheader';
 // import Subscription from './pages/home/components/subsciptions/Subscription';
 
 function App() {
@@ -26,12 +26,12 @@ function App() {
       <BrowserRouter>
         <Header /> 
         <Routes>
-          <Route index element={<Home />}></Route>
+          <Route path='/' element={<Home />}></Route>
           <Route path='/shop' element={<Shop />}></Route>
           <Route path='/about-us' element={<About_us />}></Route>
           <Route path='/contact-us' element={<Contact_us />}></Route>
           <Route path='/login' element={<WrapperContainer>
-            {/* <Login/> */}  
+            {/* <Login/>   */}
             <ForgotPass/>
           </WrapperContainer>}></Route>
           <Route path='/sign-up' element={<WrapperContainer>
