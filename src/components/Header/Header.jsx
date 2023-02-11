@@ -25,13 +25,13 @@ const Header = () => {
         <li><NavLink to="/contact-us">Contact Us</NavLink></li>
        <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/sign-up">Sign Up</NavLink></li></>
-        }
+        }  
 
    {  isLoggedIn && <>
          <li><NavLink index to="/"><BiHome size={20} /> Home</NavLink></li>
         <li><NavLink to="/goals"><GiStairsGoal size={20}/> Goals</NavLink></li>
         <li><NavLink to="/shop"><RiShoppingBag3Line size={20}/> Shop</NavLink></li>
-        <li><NavLink to="/providers"><RiStethoscopeLine size={20} /> Providers</NavLink></li>
+        { ! perspective || <li><NavLink to="/providers"><RiStethoscopeLine size={20} /> Providers</NavLink></li>}
         <li><NavLink to="/profile"><AiOutlineUser size={20} /> Profile</NavLink></li>
         <li><NavLink to="/cart"><BsCart4 size={20}/> Cart</NavLink></li>
          </>

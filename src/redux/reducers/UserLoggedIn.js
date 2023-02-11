@@ -5,10 +5,12 @@ let UserLoggedIn=(state=false, Action)=>{
     switch (Action.type) {
        case USER_LOGGEDIN_ACTION: 
             return state=Action.payload     
-       default:
+       default: 
            return state;
     }
 }
 
 export default UserLoggedIn;
+
+
 
