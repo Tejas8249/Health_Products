@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Style.css"
-import { Outlet,Link } from 'react-router-dom'
+import { Link, Outlet} from 'react-router-dom'
 import BackGround1 from "../../Assets/Images/user-img.png"
 import BackGround2 from "../../Assets/Images/provider-img.png"
 
