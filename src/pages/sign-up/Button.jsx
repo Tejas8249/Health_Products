@@ -4,7 +4,7 @@ import { FaMobileAlt } from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc"
 import { AiOutlineUser } from "react-icons/ai"
 import { TbStethoscope } from "react-icons/tb"
-import { NavLink } from 'react-router-dom'
+import { NavLink,Link } from 'react-router-dom'
 
 import {useDispatch, useSelector} from "react-redux"
 import { UserAction } from '../../redux/actionCreates/UserAction'
@@ -40,14 +40,14 @@ let data= useSelector(state=>state.UserReducer)
         </div>
       </NavLink>  
 
-      <NavLink to="/sign-up/mobile">
+      <Link to="/sign-up/mobile">
       <div className='lables'>
         <FaMobileAlt size={20} className='green'/>
         <p>Mobile OTP</p>
       </div>
-      </NavLink>
+      </Link>
 
-      <NavLink to="/sign-up/email">
+      <NavLink to="/http/www.google.com">
       <div className='lables'>
         <FcGoogle size={20} className='green'/>
         <p>Google</p>

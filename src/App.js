@@ -18,6 +18,8 @@ import ForgotPass from './pages/login/ForgotPassword/Index';
 
 // import Mainheader from './components/Mainheader';
 // import Subscription from './pages/home/components/subsciptions/Subscription';
+import Goals from './pages/Goals/Goals';
+import GoalsDetails from './pages/Goals/GoalsDetail';
 
 function App() {
   
@@ -39,14 +41,28 @@ function App() {
           </WrapperContainer>}>
             <Route index element={<ButtonContainer/>}></Route>
             <Route path="/sign-up/email" element={<Email/>}>
-            </Route>
+          </Route>
+
+          <Route path='/goals' element={<Goals/>}>
+            <Route path='/goals/goalsdetails' element={<GoalsDetails/>}/>
+          </Route>
+
+          <Route path='/login' element={<Login />}></Route>
+
+          <Route path='/sign-up' element={<Sign_Up isUser={isUser}/>}>
+            <Route index element={<ButtonContainer isUser={isUser} setIsUser={setIsUser}/>}></Route>
+            <Route path="/sign-up/email" element={<Email/>}></Route>
             <Route path="/sign-up/mobile" element={<Mobile/>}></Route>
             <Route path="/sign-up/email" element={<Email/>}></Route>
           </Route>
+
+
         </Routes>
         <Footer />
         
       </BrowserRouter>
+
+     
       
     </div>
   );
