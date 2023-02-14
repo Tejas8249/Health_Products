@@ -1,0 +1,12 @@
+.popup-div{
+    /* border: 1px solid black; */
+    width: 37%;
+    height: 22vh;
+    text-align: center;
+    background-color: white;
+    color: rgb(24, 141, 102);
+    
+}
+.goals,.first-text,.sec-text{
+    margin-top: 10px;
+}
