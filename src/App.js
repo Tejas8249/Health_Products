@@ -15,10 +15,20 @@ import Login from './pages/login/Login';
 import ForgotPass from './pages/login/ForgotPassword/Index';
 import Goals from "./pages/Goals/Goals"
 import Goalsdetails from "./pages/Goals/GoalsDetail"
-
+import { useDispatch, useSelector } from 'react-redux';
+import UserLoggedIn from './redux/reducers/UserLoggedIn';
+import { UserLoggedInAction } from './redux/actionCreates/UserLoggedInAction';
+import { UserAction } from './redux/actionCreates/UserAction';
+import { useEffect } from 'react';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 function App() {
-  
+  const state = useSelector( state => state.UserLoggedIn );
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   // dispatch(UserLoggedInAction())
+  //   dispatch(UserAction(true))
+  // },[])
   return ( 
     <div className="App">  
       <BrowserRouter>
@@ -44,6 +54,7 @@ function App() {
           <Route path='/goals' element={<Goals/>}>
             <Route path='/goals/goalsdetails' element={<Goalsdetails/>}/>
           </Route>
+          <Route path='*' element={<PageNotFound/>}/>
         </Routes>
         <Footer />
         

@@ -12,8 +12,8 @@ import { UserAction } from '../../redux/actionCreates/UserAction'
 const Button = () => {
 
 let dispatch=useDispatch();
-let data= useSelector(state=>state.UserReducer)
-// console.log(data)
+let data= useSelector(state=>state.UserPerspective)
+ console.log(data)
 
 
   return (

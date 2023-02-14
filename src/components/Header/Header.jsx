@@ -12,8 +12,7 @@ import { BsCart4 } from 'react-icons/bs'
 
 const Header = () => {
   const isLoggedIn = useSelector( state => state.UserLoggedIn);
-  const perspective= useSelector(state=>state.UserReducer);
-
+  const perspective= useSelector(state=> state.UserReducer);
   return (
    <nav>
         <h3 className='green'>Sanjeevan<span className='pink'>Stro</span>^</h3>

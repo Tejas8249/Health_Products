@@ -1,9 +1,9 @@
 import {combineReducers} from "redux";
 import UserLoggedIn from "./UserLoggedIn";
-import UserReducer from "./UserReducer";
+import UserPerspective from "./UserPerspective";
 
 let rootReducer=combineReducers({
-    UserReducer, 
+    UserPerspective, 
     UserLoggedIn
 });
 

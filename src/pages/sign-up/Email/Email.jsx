@@ -16,10 +16,12 @@ const Email = () => {
 const dispatch = useDispatch();
 const navigate = useNavigate();
 const data = useSelector(state=>state.UserLoggedIn)
+console.log(data)
 useEffect(() => {
     if(data) {<div className="03"></div>
         navigate("/")
     }
+    //  dispatch(UserLoggedInAction(false))
 },[data])
 
 const [userInfo,setUserInfo] = useState(INITIAL_USER_Info);
@@ -33,7 +35,7 @@ const onUserEnterInput = ({ target : { name ,value}}) => {
            <Input lable="Password" placeholder="Enter Password" instruction="password should be more then 8 charaters"/>
            <Input lable="Mobile" name='mobile' value={userInfo.mobile} handler={onUserEnterInput}/>          
             <button className='btn-green mt-2'
-            onClick={() => dispatch( UserLoggedInAction(true))}
+            onClick={() => dispatch(UserLoggedInAction(true))}
             >Get Started</button>
         </div>
     )
