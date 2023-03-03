@@ -13,36 +13,53 @@ import WrapperContainer from './pages/sign-up/WrapperContainer';
 import MidContainer from './pages/sign-up/MidContainer';
 import Login from './pages/login/Login';
 import ForgotPass from './pages/login/ForgotPassword/Index';
-
-
-
+import Goals from "./pages/Goals/Goals"
+import Goalsdetails from "./pages/Goals/GoalsDetail"
+import { useDispatch, useSelector } from 'react-redux';
+import UserLoggedIn from './redux/reducers/UserLoggedIn';
+import { UserLoggedInAction } from './redux/actionCreates/UserLoggedInAction';
+import { UserAction } from './redux/actionCreates/UserAction';
+import { useEffect } from 'react';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 function App() {
-  
-  return (
-    <div className="App">
+  const state = useSelector( state => state.UserLoggedIn );
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   // dispatch(UserLoggedInAction())
+  //   dispatch(UserAction(true))
+  // },[])
+  return ( 
+    <div className="App">  
       <BrowserRouter>
         <Header /> 
         <Routes>
-          <Route index element={<Home />}></Route>
+          <Route path='/' element={<Home />}></Route>
           <Route path='/shop' element={<Shop />}></Route>
           <Route path='/about-us' element={<About_us />}></Route>
           <Route path='/contact-us' element={<Contact_us />}></Route>
           <Route path='/login' element={<WrapperContainer>
-            {/* <Login/> */}  
+            {/* <Login/>   */}
             <ForgotPass/>
           </WrapperContainer>}></Route>
           <Route path='/sign-up' element={<WrapperContainer>
             <MidContainer/>
           </WrapperContainer>}>
             <Route index element={<ButtonContainer/>}></Route>
-            <Route path="/sign-up/email" element={<Email/>}></Route>
+            <Route path="/sign-up/email" element={<Email/>}>
+            </Route>
             <Route path="/sign-up/mobile" element={<Mobile/>}></Route>
-            {/* <Route path="/sign-up/email" element={<Email/>}></Route> */}
+            <Route path="/sign-up/email" element={<Email/>}></Route>
           </Route>
+          <Route path='/goals' element={<Goals/>}>
+            <Route path='/goals/goalsdetails' element={<Goalsdetails/>}/>
+          </Route>
+          <Route path='*' element={<PageNotFound/>}/>
         </Routes>
         <Footer />
+        
       </BrowserRouter>
+      
     </div>
   );
 }

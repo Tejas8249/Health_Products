@@ -1,0 +1,40 @@
+.order-track {
+  height: 18vh;
+  width: 90%;
+  border:1px solid rgb(98, 201, 144);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 47px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+.ot-section1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ot-section2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.viewDivBtn2{
+  height: 100%;
+  width: 40%;
+  background-color: transparent;
+  border: 1px solid green;
+  padding: 2%;
+  border-radius: 20px;
+
+} 
+.order-btn{
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}

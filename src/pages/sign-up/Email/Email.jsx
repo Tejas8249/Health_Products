@@ -1,43 +1,44 @@
-import React from 'react'
+import React, { useState , useEffect } from 'react'
 import "./Style.css"
 import {useDispatch, useSelector} from "react-redux"
-import { UserLoggedInAction } from '../../../redux/actionCreates/UserAction';
-import { useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { UserLoggedInAction } from '../../../redux/actionCreates/UserLoggedInAction';
+import { useNavigate } from 'react-router-dom';
+import Input from '../../../components/Input/Input';
+
+const INITIAL_USER_Info ={
+    email: "",
+    dob: "",
+    password: "",
+    mobile: ""
+}
 
 const Email = () => {
 const dispatch = useDispatch();
 const navigate = useNavigate();
 const data = useSelector(state=>state.UserLoggedIn)
+console.log(data)
 useEffect(() => {
-    if(data) {
-        navigate("/home")
+    if(data) {<div className="03"></div>
+        navigate("/")
     }
+    //  dispatch(UserLoggedInAction(false))
 },[data])
+
+const [userInfo,setUserInfo] = useState(INITIAL_USER_Info);
+const onUserEnterInput = ({ target : { name ,value}}) => {
+
+}
     return (
         <div className="email-container">
-            <div className='wrap'>
-                <span className='green'>Email<sup>*</sup></span>
-                <input type="text" />
-            </div>
-            <div className='wrap'>
-                <span className='green'>Date of Birth<sup>*</sup> </span>
-                <input type="number" placeholder='MM-DD-YY'/>
-            </div>
-            <div className='wrap'>
-                <span className='green'>Password<sup>*</sup> </span>
-                <input type="password" placeholder='Enter Password'/>
-                <p>password should be more then 8 charaters</p>
-            </div>
-            <div className='wrap'>
-                <span className='green'>Mobile</span>
-                <input type="tel" maxLength={10}/>
-            </div>
+           <Input lable="Email" span="*" name="email" value={userInfo.email} handler={onUserEnterInput}/>
+           <Input lable="Date of Birth" span="*" placeholder='MM-DD-YY' name='dob' value={userInfo.dob} handler={onUserEnterInput} />
+           <Input lable="Password" placeholder="Enter Password" instruction="password should be more then 8 charaters"/>
+           <Input lable="Mobile" name='mobile' value={userInfo.mobile} handler={onUserEnterInput}/>          
             <button className='btn-green mt-2'
-            onClick={() => dispatch( UserLoggedInAction(true))}
+            onClick={() => dispatch(UserLoggedInAction(true))}
             >Get Started</button>
         </div>
     )
 }
 
-export default Email
+export default Email;

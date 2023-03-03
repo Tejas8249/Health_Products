@@ -1,0 +1,65 @@
+.gol-container {
+    min-height:clamp(85vh,85vw,85vh);
+    background-color: rgb(183, 218, 205);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.green2 {
+    margin: 7px 0;
+}
+
+.stro-gol{
+    height: 20vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text{
+    /* border: 1px solid black; */
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+.text-container{
+   /* border: 1px solid black; */
+   height: 40vh;
+}
+.goal-btn{
+    background-color: green ;
+    color: white;
+    padding: 5px 60px;
+    border: none;
+    border-radius: 8px;
+}
+.nav-color{
+    color:green ;
+}
+
+.text-bgcolor{
+    background-color: rgba(245, 182, 193, 0.87) !important;
+}
+.popup-btn{
+    position: relative;
+    left: 242px;
+}
+.popup-div{
+    /* border: 1px solid black; */
+    height: 40vh !important;
+    width: 10%;
+
+}
+
+.h6-container{
+    /* border: 1px solid red; */
+    width: 45%;
+    margin: 0 auto;
+}
+
